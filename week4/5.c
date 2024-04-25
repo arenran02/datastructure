@@ -13,10 +13,11 @@ int main() {
         matrix[i] = (int *)malloc(N * sizeof(int));
     }
 
-    // 행렬 채우기
+    // 행렬 채우기 - 패턴에 따라 숫자 채워넣기
     int count = 1;
     for (int col = 0; col < N; col++) {
         int row = 0;
+        // 대각선 방향으로 숫자를 채워넣기
         for (int j = col; j >= 0 && row < M; j--) {
             matrix[row][j] = count++;
             row++;
@@ -26,6 +27,7 @@ int main() {
     // 맨 아래 행의 나머지 부분 채우기
     for (int row = 1; row < M; row++) {
         int col = N - 1;
+        // 대각선 방향으로 숫자를 채워넣기
         for (int j = row; j < M && col >= 0; j++) {
             matrix[j][col] = count++;
             col--;
@@ -37,7 +39,7 @@ int main() {
         for (int j = 0; j < N; j++) {
             printf("%d ", matrix[i][j]);
         }
-        printf("\n");
+        printf("\n"); // 행 출력 후 줄바꿈
     }
 
     // 동적 할당 해제

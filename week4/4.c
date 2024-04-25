@@ -48,19 +48,19 @@ int main() {
         }
     }
 
+    // 행렬 출력
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
-            printf("%3d ", matrix[i][j]);
+            printf("%3d ", matrix[i][j]); // 3자리로 정렬하여 출력
         }
-        printf("\n");
+        printf("\n"); // 각 행 출력 후 줄바꿈
     }
 
-    // 동적 할당 해제
+    // 동적으로 할당한 메모리 해제
     for (int i = 0; i < M; i++) {
         free(matrix[i]);
     }
     free(matrix);
 
     return 0;
-
 }

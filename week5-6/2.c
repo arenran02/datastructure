@@ -9,7 +9,6 @@ struct Node {
 };
 
 // 새로운 항을 추가하는 함수
-// 새로운 항을 추가하는 함수
 void addTerm(struct Node** poly, int coef, int exp) {
     // 새로운 항을 위한 노드 생성
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -30,7 +29,6 @@ void addTerm(struct Node** poly, int coef, int exp) {
         temp->next = newNode;
     }
 }
-
 
 // 두 다항식을 더하는 함수
 struct Node* addPolynomials(struct Node* poly1, struct Node* poly2) {
