@@ -51,7 +51,7 @@ int main() {
     insert(&head, "목");
 
     // 연결 리스트의 내용 출력
-    printf("연결 리스트의 내용: "); 
+    printf("연결 리스트의 내용: ");
 
     return 0;
 }
